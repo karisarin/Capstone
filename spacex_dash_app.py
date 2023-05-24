@@ -59,9 +59,9 @@ def get_pie_chart(entered_site):
     filtered_df = spacex_df
     if entered_site == 'ALL':
         fig = px.pie(spacex_df, values='class', 
-        names='pie chart names', 
-        title='title')
-        return fig                  
+        names='Launch Site', 
+        title='Total success for all launch sites')
+        return fig                
     else:
         # return the outcomes piechart for a selected site
         filtered_df = spacex_df[spacex_df['Launch Site'] == entered_site]
